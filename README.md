@@ -18,6 +18,26 @@ const debug = require("colondebug")("ts-junit");
 debug(Object.keys(console))
 ```
 
+执行结果
+
+```
+$ DEBUG=ts-junit node test
+  colondebug [
+  colondebug   'log',            'warn',
+  colondebug   'dir',            'time',
+  colondebug   'timeEnd',        'timeLog',
+  colondebug   'trace',          'assert',
+  colondebug   'clear',          'count',
+  colondebug   'countReset',     'group',
+  colondebug   'groupEnd',       'table',
+  colondebug   'debug',          'info',
+  colondebug   'dirxml',         'error',
+  colondebug   'groupCollapsed', 'Console',
+  colondebug   'profile',        'profileEnd',
+  colondebug   'timeStamp',      'context'
+  colondebug ] +0ms
+```
+
 当不想加入`DEBUG=xx`的时候，可以在key后面加入console.xxx
 
 ```js
@@ -26,9 +46,10 @@ const debug = require("colondebug")("ts-junit:dir");
 debug(Object.keys(console))
 ```
 
-其中冒号后面，可以接入的参数有如下。
+执行结果
 
 ```
+$ node test.js
 [
   'log',            'warn',
   'dir',            'time',
@@ -44,6 +65,8 @@ debug(Object.keys(console))
   'timeStamp',      'context'
 ]
 ```
+
+其中冒号后面，可以接入的参数有如上数组中的任一。
 
 ## Contributing
 
