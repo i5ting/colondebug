@@ -1,5 +1,4 @@
 
-var debug = require('.')('colondebug:dir')
+const debug = require('.')('colondebug:dir')
 
 debug(Object.keys(console))
-

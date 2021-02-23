@@ -6,24 +6,24 @@ colondebug is a debug tool with console.xxx
 
 ## Install
 
-    $ [sudo] npm install --save colondebug
+    $ npm install --save colondebug
 
 ## Usage 
 
 此种情况，colondebug就是debug模块。
 
-```
-  var debug = require("colondebug")("ts-junit");
+```js
+const debug = require("colondebug")("ts-junit");
   
-  debug({a:1, b:2});
+debug(Object.keys(console))
 ```
 
 当不想加入`DEBUG=xx`的时候，可以在key后面加入console.xxx
 
-```
-  var debug = require("colondebug")("ts-junit:dir");
-
-  debug({a:1, b:2});
+```js
+const debug = require("colondebug")("ts-junit:dir");
+  
+debug(Object.keys(console))
 ```
 
 其中冒号后面，可以接入的参数有如下。
